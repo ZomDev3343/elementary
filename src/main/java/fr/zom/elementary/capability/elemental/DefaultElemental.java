@@ -64,6 +64,48 @@ public class DefaultElemental implements IElementalCapa
     }
 
     @Override
+    public int addFire(int amount)
+    {
+        setFire(this.fire += amount);
+        return this.fire;
+    }
+
+    @Override
+    public int addWater(int amount)
+    {
+        setWater(this.water += amount);
+        return this.water;
+    }
+
+    @Override
+    public int addEarth(int amount)
+    {
+        setEarth(this.earth += amount);
+        return this.earth;
+    }
+
+    @Override
+    public int addBolt(int amount)
+    {
+        setBolt(this.bolt += amount);
+        return this.bolt;
+    }
+
+    @Override
+    public int addShadow(int amount)
+    {
+        setShadow(this.shadow += amount);
+        return this.shadow;
+    }
+
+    @Override
+    public int addAir(int amount)
+    {
+        setAir(this.air += amount);
+        return this.air;
+    }
+
+    @Override
     public void setFire(int amount)
     {
         this.fire = amount;

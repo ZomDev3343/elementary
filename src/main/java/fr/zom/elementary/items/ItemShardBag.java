@@ -1,6 +1,5 @@
 package fr.zom.elementary.items;
 
-import fr.zom.elementary.container.ContainerShardBag;
 import fr.zom.elementary.init.ModContainers;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -18,8 +17,6 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-
-import java.util.WeakHashMap;
 
 public class ItemShardBag extends Item
 {
@@ -56,6 +53,6 @@ public class ItemShardBag extends Item
             playerIn.openContainer(ModContainers.SHARD_BAG.get().create(0, playerIn.inventory));
         }
 
-        return ActionResult.success(playerIn.getHeldItem(handIn));
+        return ActionResult.resultSuccess(playerIn.getHeldItem(handIn));
     }
 }

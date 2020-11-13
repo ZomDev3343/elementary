@@ -2,13 +2,12 @@ package fr.zom.elementary;
 
 import fr.zom.elementary.capability.elemental.ElementalProvider;
 import fr.zom.elementary.client.gui.ContainerScreenShardBag;
+import fr.zom.elementary.events.PlayerKillMobEvent;
 import fr.zom.elementary.init.ModContainers;
 import fr.zom.elementary.init.ModItems;
 import net.minecraft.client.gui.ScreenManager;
-import net.minecraftforge.common.extensions.IForgeContainerType;
-import net.minecraftforge.common.extensions.IForgePacketBuffer;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -30,6 +29,8 @@ public class Elementary
 
         ModItems.ITEMS.register(bus);
         ModContainers.CONTAINERS.register(bus);
+
+        MinecraftForge.EVENT_BUS.register(new PlayerKillMobEvent());
 
     }
 

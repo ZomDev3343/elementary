@@ -1,8 +1,8 @@
 package fr.zom.elementary.init;
 
 import fr.zom.elementary.Elementary;
+import fr.zom.elementary.items.ItemElementalBook;
 import fr.zom.elementary.items.ItemElementsScythe;
-import fr.zom.elementary.items.ItemShardBag;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
@@ -24,6 +24,8 @@ public class ModItems
     public static final RegistryObject<Item> WATER_INFUSED_SHARD = ITEMS.register("water_infused_shard", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> EARTH_INFUSED_SHARD = ITEMS.register("earth_infused_shard", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
     public static final RegistryObject<Item> BOLT_INFUSED_SHARD = ITEMS.register("bolt_infused_shard", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
+    public static final RegistryObject<Item> ELEMENTAL_BOOK = ITEMS.register("elemental_book", ItemElementalBook::new);
 
     //public static final RegistryObject<Item> SHARD_BAG = ITEMS.register("shard_bag", ItemShardBag::new);
 

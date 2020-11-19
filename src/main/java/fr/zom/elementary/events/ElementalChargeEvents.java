@@ -6,13 +6,10 @@ import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Elementary.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ElementalChargeEvents
-{
+public class ElementalChargeEvents {
 
-    public static void playerBreakEvent(BlockEvent.BreakEvent e)
-    {
+    public static void playerBreakEvent(BlockEvent.BreakEvent e) {
         PlayerEntity player = e.getPlayer();
-
 
 
     }

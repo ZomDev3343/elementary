@@ -5,8 +5,6 @@ import fr.zom.elementary.init.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 
-import java.util.Locale;
-
 public class ENLangProvider extends LanguageProvider {
 
     public ENLangProvider(DataGenerator gen) {

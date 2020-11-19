@@ -2,8 +2,7 @@ package fr.zom.elementary.capability.elemental;
 
 import net.minecraft.entity.player.ServerPlayerEntity;
 
-public class DefaultElemental implements IElementalCapa
-{
+public class DefaultElemental implements IElementalCapa {
 
     private int fire;
     private int water;
@@ -12,8 +11,7 @@ public class DefaultElemental implements IElementalCapa
     private int shadow;
     private int air;
 
-    public DefaultElemental(int fire, int water, int earth, int bolt, int shadow, int air)
-    {
+    public DefaultElemental(int fire, int water, int earth, int bolt, int shadow, int air) {
         this.fire = fire;
         this.water = water;
         this.earth = earth;
@@ -22,131 +20,111 @@ public class DefaultElemental implements IElementalCapa
         this.air = air;
     }
 
-    public DefaultElemental()
-    {
+    public DefaultElemental() {
         this(0, 0, 0, 0, 0, 0);
     }
 
     @Override
-    public int getFire()
-    {
+    public int getFire() {
         return this.fire;
     }
 
     @Override
-    public int getWater()
-    {
-        return this.water;
-    }
-
-    @Override
-    public int getEarth()
-    {
-        return this.earth;
-    }
-
-    @Override
-    public int getBolt()
-    {
-        return this.bolt;
-    }
-
-    @Override
-    public int getShadow()
-    {
-        return this.shadow;
-    }
-
-    @Override
-    public int getAir()
-    {
-        return this.air;
-    }
-
-    @Override
-    public int addFire(int amount)
-    {
-        setFire(this.fire += amount);
-        return this.fire;
-    }
-
-    @Override
-    public int addWater(int amount)
-    {
-        setWater(this.water += amount);
-        return this.water;
-    }
-
-    @Override
-    public int addEarth(int amount)
-    {
-        setEarth(this.earth += amount);
-        return this.earth;
-    }
-
-    @Override
-    public int addBolt(int amount)
-    {
-        setBolt(this.bolt += amount);
-        return this.bolt;
-    }
-
-    @Override
-    public int addShadow(int amount)
-    {
-        setShadow(this.shadow += amount);
-        return this.shadow;
-    }
-
-    @Override
-    public int addAir(int amount)
-    {
-        setAir(this.air += amount);
-        return this.air;
-    }
-
-    @Override
-    public void setFire(int amount)
-    {
+    public void setFire(int amount) {
         this.fire = amount;
     }
 
     @Override
-    public void setWater(int amount)
-    {
+    public int getWater() {
+        return this.water;
+    }
+
+    @Override
+    public void setWater(int amount) {
         this.water = amount;
     }
 
     @Override
-    public void setEarth(int amount)
-    {
+    public int getEarth() {
+        return this.earth;
+    }
+
+    @Override
+    public void setEarth(int amount) {
         this.earth = amount;
     }
 
     @Override
-    public void setBolt(int amount)
-    {
+    public int getBolt() {
+        return this.bolt;
+    }
+
+    @Override
+    public void setBolt(int amount) {
         this.bolt = amount;
 
     }
 
     @Override
-    public void setShadow(int amount)
-    {
+    public int getShadow() {
+        return this.shadow;
+    }
+
+    @Override
+    public void setShadow(int amount) {
         this.shadow = amount;
 
     }
 
     @Override
-    public void setAir(int amount)
-    {
+    public int getAir() {
+        return this.air;
+    }
+
+    @Override
+    public void setAir(int amount) {
         this.air = amount;
 
     }
 
     @Override
-    public void sync(ServerPlayerEntity serverPlayerEntity)
-    {
+    public int addFire(int amount) {
+        setFire(this.fire += amount);
+        return this.fire;
+    }
+
+    @Override
+    public int addWater(int amount) {
+        setWater(this.water += amount);
+        return this.water;
+    }
+
+    @Override
+    public int addEarth(int amount) {
+        setEarth(this.earth += amount);
+        return this.earth;
+    }
+
+    @Override
+    public int addBolt(int amount) {
+        setBolt(this.bolt += amount);
+        return this.bolt;
+    }
+
+    @Override
+    public int addShadow(int amount) {
+        setShadow(this.shadow += amount);
+        return this.shadow;
+    }
+
+    @Override
+    public int addAir(int amount) {
+        setAir(this.air += amount);
+        return this.air;
+    }
+
+    @Override
+    public void sync(ServerPlayerEntity serverPlayerEntity) {
         // Envoi de paquets si besoin
     }
 }

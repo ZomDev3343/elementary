@@ -9,8 +9,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class ModItems
-{
+public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Elementary.MODID);
 
@@ -27,6 +26,6 @@ public class ModItems
 
     public static final RegistryObject<Item> ELEMENTAL_BOOK = ITEMS.register("elemental_book", ItemElementalBook::new);
 
-    //public static final RegistryObject<Item> SHARD_BAG = ITEMS.register("shard_bag", ItemShardBag::new);
+    public static final RegistryObject<Item> HARDENED_STICK = ITEMS.register("hardened_stick", () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
 }

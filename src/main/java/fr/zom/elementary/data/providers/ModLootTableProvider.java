@@ -6,7 +6,6 @@ import fr.zom.elementary.data.loot_tables.ModBlockLootTables;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.loot.LootParameterSet;
 import net.minecraft.loot.LootParameterSets;
-import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.data.ForgeLootTableProvider;

@@ -5,11 +5,9 @@ import net.minecraft.nbt.IntArrayNBT;
 import net.minecraft.util.Direction;
 import net.minecraftforge.common.capabilities.Capability;
 
-public class ElementalStorage implements Capability.IStorage<IElementalCapa>
-{
+public class ElementalStorage implements Capability.IStorage<IElementalCapa> {
     @Override
-    public INBT writeNBT(Capability<IElementalCapa> capability, IElementalCapa instance, Direction side)
-    {
+    public INBT writeNBT(Capability<IElementalCapa> capability, IElementalCapa instance, Direction side) {
 
         IntArrayNBT nbt = new IntArrayNBT(new int[]{instance.getFire(), instance.getWater(), instance.getEarth(), instance.getBolt(),
                 instance.getShadow(), instance.getAir()});
@@ -18,8 +16,7 @@ public class ElementalStorage implements Capability.IStorage<IElementalCapa>
     }
 
     @Override
-    public void readNBT(Capability<IElementalCapa> capability, IElementalCapa instance, Direction side, INBT nbt)
-    {
+    public void readNBT(Capability<IElementalCapa> capability, IElementalCapa instance, Direction side, INBT nbt) {
         IntArrayNBT array = (IntArrayNBT) nbt;
 
         instance.setFire(array.get(0).getInt());
